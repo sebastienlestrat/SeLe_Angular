@@ -7,38 +7,9 @@
     <!-- Modifier le code ci-dessous -->
     <div class="content">
       <!-- Ces éléments sont affichés sur la même ligne -->
-      <div class="row">
-        <mat-card>
-          <mat-card-content>This is a card 1</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card 2</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card 3</mat-card-content>
-        </mat-card>
-      </div>
-      <div class="center">
-        <mat-card>
-          <mat-card-content>This is a card 4</mat-card-content>
-        </mat-card>
-      </div>
-      <div class="right">
-        <mat-card>
-          <mat-card-content>This is a card 5</mat-card-content>
-        </mat-card>
-      </div>
-      <!-- Ces éléments sont affichés l'un en dessous de l'autre -->
-      <div class="colonne">
-        <mat-card>
-          <mat-card-content>This is a card 6</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card 7</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card 8</mat-card-content>
-        </mat-card>
+      <div class="row" *ngIf="pokemon && pokemon.length >= 2">
+        <app-enfant [pokemonListInput]="pokemon" (deletePokemonEvent)="removePokemon($event)">
+        </app-enfant>
       </div>
     </div>
 
