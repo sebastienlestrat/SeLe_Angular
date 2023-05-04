@@ -9,6 +9,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class EnfantComponent {
 @Input()  pokemonListInput : Pokemon[] = []; // decorate the property with @Input()
 @Output() deletePokemonEvent = new EventEmitter<number>;
+@Output() showdetailsEvent = new EventEmitter<Pokemon>;
+
+showDetails(Pokemon : Pokemon) {
+  this.showdetailsEvent.emit(Pokemon);
+}
 
 
 deletePokemon(id : number) {

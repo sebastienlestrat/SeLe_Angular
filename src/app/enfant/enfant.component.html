@@ -1,6 +1,7 @@
 <p *ngFor="let pokemon of pokemonListInput">
 {{pokemon.name}}
 {{pokemon.type}}
-<button class="button-63" role="button" aria-placeholder="Delete" (click)="deletePokemon(pokemon.id)">Delete</button>
+<button class="button-63" role="button" (click)="deletePokemon(pokemon.id)">Delete</button>
+<button class="button-63" role="button" (click)="showDetails(pokemon)">Show Details</button>
 </p>
 

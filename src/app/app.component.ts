@@ -13,7 +13,14 @@ export class AppComponent {
     {id: 3, name: 'Carapuce', type: 'Eau', shortDescription: "Quand il rentre son cou dans sa carapace, il peut projeter de l'eau à haute pression", longDescription: ''}
   ];
 
+  selectedPokemon? : Pokemon ;
+  
   removePokemon(id : number) {
     this.pokemon = this.pokemon.filter(pokemon => pokemon.id !== id)
   }
+
+  onSelectedPokemon(pokemon : Pokemon) {
+    this.selectedPokemon = pokemon ;
+  }
+
 }

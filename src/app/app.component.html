@@ -8,8 +8,13 @@
     <div class="content">
       <!-- Ces éléments sont affichés sur la même ligne -->
       <div class="row" *ngIf="pokemon && pokemon.length >= 2">
-        <app-enfant [pokemonListInput]="pokemon" (deletePokemonEvent)="removePokemon($event)">
+        
+        <app-enfant [pokemonListInput]="pokemon" (deletePokemonEvent)="removePokemon($event)" (showdetailsEvent)="onSelectedPokemon($event)">
         </app-enfant>
+        
+        <app-pokemon-details [pokemonDetailsInput]="selectedPokemon">
+        </app-pokemon-details>
+      
       </div>
     </div>
 
