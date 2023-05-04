@@ -9,8 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import { EnfantComponent } from './enfant/enfant.component';
-import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
+import { EnfantComponent } from './components/enfant/enfant.component';
+import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
+import { PokemonFavorisComponent } from './components/pokemon-favoris/pokemon-favoris.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -19,6 +21,8 @@ import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.compo
     AppComponent,
     EnfantComponent,
     PokemonDetailsComponent,
+    PokemonFavorisComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

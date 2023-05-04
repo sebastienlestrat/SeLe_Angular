@@ -1,4 +1,4 @@
-import { Pokemon } from './../models/pokemon';
+import { Pokemon } from './../../models/pokemon';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -10,13 +10,17 @@ export class EnfantComponent {
 @Input()  pokemonListInput : Pokemon[] = []; // decorate the property with @Input()
 @Output() deletePokemonEvent = new EventEmitter<number>;
 @Output() showdetailsEvent = new EventEmitter<Pokemon>;
-
-showDetails(Pokemon : Pokemon) {
-  this.showdetailsEvent.emit(Pokemon);
-}
-
+@Output() favoritePokemonEvent = new EventEmitter<Pokemon>;
 
 deletePokemon(id : number) {
   this.deletePokemonEvent.emit(id);
+}
+
+showDetails(pokemon : Pokemon) {
+  this.showdetailsEvent.emit(pokemon);
+}
+
+favoritePokemon(pokemon : Pokemon) {
+  this.favoritePokemonEvent.emit(pokemon);
 }
 }

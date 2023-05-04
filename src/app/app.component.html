@@ -2,21 +2,19 @@
 <html lang="en">
   <div class=" " role="main">
     <mat-toolbar color="primary">
-      <span>Brief Angular</span>
+      <span>Brief Angular Pokemon</span>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  <ul>  
+    <li><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
+    <li><a routerLink="/favorites" routerLinkActive="active" ariaCurrentWhenActive="page">Favorite</a></li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
     </mat-toolbar>
-    <!-- Modifier le code ci-dessous -->
-    <div class="content">
-      <!-- Ces éléments sont affichés sur la même ligne -->
-      <div class="row" *ngIf="pokemon && pokemon.length >= 2">
-        
-        <app-enfant [pokemonListInput]="pokemon" (deletePokemonEvent)="removePokemon($event)" (showdetailsEvent)="onSelectedPokemon($event)">
-        </app-enfant>
-        
-        <app-pokemon-details [pokemonDetailsInput]="selectedPokemon">
-        </app-pokemon-details>
-      
-      </div>
-    </div>
+
+
 
     <!-- Footer -->
     <footer></footer>
